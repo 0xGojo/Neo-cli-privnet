@@ -1,8 +1,16 @@
-System.Runtime.InteropServices.SEHException
-External component has thrown an exception.
-   at Neo.IO.Data.LevelDB.Native.leveldb_open(IntPtr options, String name, IntPtr& error)
-   at Neo.IO.Data.LevelDB.DB.Open(String name, Options options)
+System.TypeInitializationException
+The type initializer for 'Neo.Core.Blockchain' threw an exception.
    at Neo.Implementations.Blockchains.LevelDB.LevelDBBlockchain..ctor(String path)
    at Neo.Shell.MainService.OnStart(String[] args)
    at Neo.Services.ConsoleServiceBase.Run(String[] args)
    at Neo.Program.Main(String[] args)
+
+System.TypeInitializationException
+The type initializer for 'Neo.Cryptography.Helper' threw an exception.
+   at Neo.Cryptography.Helper.Sha256(IEnumerable`1 value)
+   at Neo.Core.Helper.ToScriptHash(Byte[] script)
+   at Neo.Core.Blockchain..cctor()
+
+System.TypeLoadException
+Could not load type 'System.Security.Cryptography.RIPEMD160Managed' from assembly 'mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'.
+   at Neo.Cryptography.Helper..cctor()
